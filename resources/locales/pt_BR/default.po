@@ -1,0 +1,8 @@
+msgid "My name is {0}"
+msgstr "Je m'appelle {0}"
+
+msgid "Users"
+msgstr "Usuários"
+
+msgid "Invalid username or password"
+msgstr "Email ou senha incorretos"
