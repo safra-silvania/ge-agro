@@ -1,15 +1,9 @@
 <?php
-declare(strict_types=1);
+declare (strict_types = 1);
 
 namespace App\Controller;
 
-use Cake\Core\Configure;
-use Cake\Http\Exception\ForbiddenException;
-use Cake\Http\Exception\NotFoundException;
-use Cake\Http\Response;
-use Cake\View\Exception\MissingTemplateException;
 use Cake\Mailer\Mailer;
-use Spatie\Async\Pool;
 
 class SiteController extends AppController
 {
@@ -19,7 +13,7 @@ class SiteController extends AppController
 
         $this->viewBuilder()->setLayout('default');
 
-        $this->Authentication->allowUnauthenticated(['home', 'servicos', 'mail', 'login', 'contato']);
+        $this->Authentication->allowUnauthenticated(['home', 'empresa', 'servicos', 'mail', 'login', 'contato']);
 
         $siteTopMenu = parent::getSiteTopMenu();
         $this->set(compact('siteTopMenu'));
@@ -33,15 +27,74 @@ class SiteController extends AppController
         $this->set('title', "Home");
     }
 
-    public function servicos($id = null)
+    public function servicos()
     {
-        $subpage = $this->Subpages->get($id, ['contain' => []]);
+        $page = $this->Pages->get(3, ['contain' => []]);
+        $title = $page->name;
 
-        $crumbs = ['Home', 'Serviços', $subpage->name];
-        $this->set(compact('crumbs'));
-        
-        $this->set('title', $subpage->name);
-        $this->set(compact('subpage'));
+        $crumbs = ['Home', $title];
+
+        $this->set(compact('title', 'crumbs', 'page'));
+    }
+
+    public function empresa()
+    {
+        $page = $this->Pages->get(10, ['contain' => []]);
+        $title = $page->name;
+
+        $crumbs = ['Home', $title];
+
+        $this->set(compact('title', 'crumbs', 'page'));
+    }
+
+    public function noticias()
+    {
+        $page = $this->Pages->get(12, ['contain' => []]);
+        $title = $page->name;
+
+        $crumbs = ['Home', $title];
+
+        $this->set(compact('title', 'crumbs', 'page'));
+    }
+
+    public function cadastro()
+    {
+        $page = $this->Pages->get(11, ['contain' => []]);
+        $title = $page->name;
+
+        $crumbs = ['Home', $title];
+
+        $this->set(compact('title', 'crumbs', 'page'));
+    }
+
+    public function eventos()
+    {
+        $page = $this->Pages->get(13, ['contain' => []]);
+        $title = $page->name;
+
+        $crumbs = ['Home', $title];
+
+        $this->set(compact('title', 'crumbs', 'page'));
+    }
+
+    public function sitesUteis()
+    {
+        $page = $this->Pages->get(14, ['contain' => []]);
+        $title = $page->name;
+
+        $crumbs = ['Home', $title];
+
+        $this->set(compact('title', 'crumbs', 'page'));
+    }
+
+    public function cursos()
+    {
+        $page = $this->Pages->get(15, ['contain' => []]);
+        $title = $page->name;
+
+        $crumbs = ['Home', $title];
+
+        $this->set(compact('title', 'crumbs', 'page'));
     }
 
     public function contato()
@@ -66,10 +119,10 @@ class SiteController extends AppController
                         ->setTo('delfino.cesar@gmail.com')
                         ->setFrom([$email => $name])
                         ->viewBuilder()
-                            ->setTemplate('default')
-                            ->setLayout('default')
+                        ->setTemplate('default')
+                        ->setLayout('default')
                         // ->deliver("{$name} - {$email} - {$message}")
-                        ;
+                    ;
                     $mailer->deliver();
 
                     $emailReturn = "Success";
@@ -102,7 +155,7 @@ class SiteController extends AppController
         $this->set(compact('crumbs'));
 
         $result = $this->Authentication->getResult();
-        
+
         if ($result->isValid()) {
             $target = $this->Authentication->getLoginRedirect() ?? '/dashboard';
             return $this->redirect($target);

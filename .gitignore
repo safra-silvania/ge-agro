@@ -7,6 +7,7 @@
 /vendor/*
 /webroot/node_modules/*
 /webroot/upload/*
+/webroot/dist/*
 
 /tmp/cache/models/*
 !/tmp/cache/models/empty
@@ -54,5 +55,6 @@ Thumbs.db
 nbproject/*
 # Visual Studio Code
 .vscode
+.history
 # Sass preprocessor
 .sass-cache/

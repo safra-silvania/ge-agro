@@ -1,7 +1,7 @@
 <?php
 
-use Cake\Routing\Route\DashedRoute;
 use Cake\Routing\RouteBuilder;
+use Cake\Routing\Route\DashedRoute;
 
 /*
  * The default class to use for all routes
@@ -32,6 +32,12 @@ $routes->scope('/', function (RouteBuilder $builder) {
      */
     $builder->connect('/', ['controller' => 'site', 'action' => 'home']);
     $builder->connect('/servicos', ['controller' => 'site', 'action' => 'servicos']);
+    $builder->connect('/empresa', ['controller' => 'site', 'action' => 'empresa']);
+    $builder->connect('/noticias', ['controller' => 'site', 'action' => 'noticias']);
+    $builder->connect('/eventos', ['controller' => 'site', 'action' => 'eventos']);
+    $builder->connect('/sites_uteis', ['controller' => 'site', 'action' => 'sites_uteis']);
+    $builder->connect('/cursos', ['controller' => 'site', 'action' => 'cursos']);
+    $builder->connect('/cadastro', ['controller' => 'site', 'action' => 'cadastro']);
     $builder->connect('/contato', ['controller' => 'site', 'action' => 'contato']);
     $builder->connect('/mail', ['controller' => 'site', 'action' => 'mail']);
     $builder->connect('/login', ['controller' => 'site', 'action' => 'login']);
