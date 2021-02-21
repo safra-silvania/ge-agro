@@ -3,7 +3,7 @@
 <section class="content" style="padding-bottom: 0px;">
 	<section class="main">
 		<article class="intro">
-			<h1><strong>GE-AGRO</strong>, insumos agrículas</h1>
+			<h1><strong>GE-AGRO</strong>, insumos agrícolas</h1>
 			<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
             <?=$this->Html->link('Conheça Nossos Serviços', ['controller' => 'site', 'action' => 'servicos'])?>
 		</article>
