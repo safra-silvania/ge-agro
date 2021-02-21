@@ -28,7 +28,7 @@
         <?=$this->element('examples/cotacoes')?>
         <?=$this->element('examples/cambio')?>
 	</aside>
-	<a href="#top" class="go-top">Go to top of page</a>
+	<a href="#top" class="go-top">Topo</a>
 </section>
 
 <section class="content">
