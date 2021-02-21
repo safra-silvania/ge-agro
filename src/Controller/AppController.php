@@ -1,13 +1,12 @@
 <?php
-declare(strict_types=1);
+declare (strict_types = 1);
 
 namespace App\Controller;
 
-use Cake\Controller\Controller;
-use Cake\Cache\Cache;
-use Cake\Core\Configure;
-use Cake\Routing\Router;
 use App\Model\Enum;
+use Cake\Cache\Cache;
+use Cake\Controller\Controller;
+use Cake\Core\Configure;
 
 class AppController extends Controller
 {
@@ -26,7 +25,7 @@ class AppController extends Controller
         $this->action = $this->request->getParam('action');
 
         $this->viewBuilder()->setLayout('admin');
-        
+
         $this->set('production', Configure::read('production'));
         $this->set('userAuthenticated', $this->userAuthenticated);
         $this->set('collapsedSidebar', Cache::read('collapsedSidebar') === true);
@@ -56,28 +55,28 @@ class AppController extends Controller
                         'url' => ['controller' => 'dashboard', 'action' => 'index'],
                         'options' => ['escape' => false, 'title' => 'Dashboard'],
                         'active' => false,
-                    ]
-                ]
+                    ],
+                ],
             ];
 
             $siteTopMenu[] = [
                 'label' => "Sair <i class='fas fa-sign-out-alt'></i>",
                 'url' => ['controller' => 'site', 'action' => 'logout'],
                 'options' => ['escape' => false, 'title' => 'Logout'],
-                'active' => false
+                'active' => false,
             ];
         } else {
             $siteTopMenu[] = [
                 'label' => "",
                 'url' => [],
                 'options' => [],
-                'active' => true
+                'active' => true,
             ];
             $siteTopMenu[] = [
                 'label' => "<i class='fas fa-lock'></i> Login",
                 'url' => ['controller' => 'site', 'action' => 'login'],
                 'options' => ['escape' => false, 'title' => 'Login'],
-                'active' => false
+                'active' => false,
             ];
         }
 
@@ -94,10 +93,10 @@ class AppController extends Controller
             }])
             ->where([
                 'tenant_id' => $this->tenantId,
-                'page_status_id' => Enum\PageStatus::Ativa
+                'page_status_id' => Enum\PageStatus::Ativa,
             ])
             ->order(['order' => 'asc']);
-        
+
         foreach ($pages as $page) {
             $submenu = [];
             if (isset($page->subpages) && count($page->subpages) > 0) {
@@ -115,10 +114,10 @@ class AppController extends Controller
                 'label' => $page->name,
                 'url' => ['controller' => 'site', 'action' => $page->action],
                 'active' => $this->action == $page->action,
-                'submenu' => $submenu
+                'submenu' => $submenu,
             ];
         }
-        
+
         return $menu;
     }
 

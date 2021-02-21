@@ -35,9 +35,10 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->connect('/empresa', ['controller' => 'site', 'action' => 'empresa']);
     $builder->connect('/noticias', ['controller' => 'site', 'action' => 'noticias']);
     $builder->connect('/eventos', ['controller' => 'site', 'action' => 'eventos']);
-    $builder->connect('/sites_uteis', ['controller' => 'site', 'action' => 'sites_uteis']);
+    $builder->connect('/links-uteis', ['controller' => 'site', 'action' => 'links_uteis']);
     $builder->connect('/cursos', ['controller' => 'site', 'action' => 'cursos']);
     $builder->connect('/cadastro', ['controller' => 'site', 'action' => 'cadastro']);
+    $builder->connect('/classificados', ['controller' => 'site', 'action' => 'classificados']);
     $builder->connect('/contato', ['controller' => 'site', 'action' => 'contato']);
     $builder->connect('/mail', ['controller' => 'site', 'action' => 'mail']);
     $builder->connect('/login', ['controller' => 'site', 'action' => 'login']);

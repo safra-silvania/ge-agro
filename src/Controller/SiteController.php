@@ -13,7 +13,7 @@ class SiteController extends AppController
 
         $this->viewBuilder()->setLayout('default');
 
-        $this->Authentication->allowUnauthenticated(['home', 'empresa', 'servicos', 'noticias', 'eventos', 'sites_uteis', 'cursos', 'mail', 'login', 'contato']);
+        $this->Authentication->allowUnauthenticated(['home', 'empresa', 'servicos', 'noticias', 'eventos', 'classificados', 'linksUteis', 'cursos', 'mail', 'login', 'contato']);
 
         $siteTopMenu = parent::getSiteTopMenu();
         $this->set(compact('siteTopMenu'));
@@ -67,7 +67,7 @@ class SiteController extends AppController
         $this->set(compact('title', 'crumbs', 'page'));
     }
 
-    public function sitesUteis()
+    public function linksUteis()
     {
         $page = $this->Pages->get(7, ['contain' => []]);
         $title = $page->name;
@@ -90,6 +90,16 @@ class SiteController extends AppController
     public function cadastro()
     {
         $page = $this->Pages->get(9, ['contain' => []]);
+        $title = $page->name;
+
+        $crumbs = ['Home', $title];
+
+        $this->set(compact('title', 'crumbs', 'page'));
+    }
+
+    public function classificados()
+    {
+        $page = $this->Pages->get(10, ['contain' => []]);
         $title = $page->name;
 
         $crumbs = ['Home', $title];

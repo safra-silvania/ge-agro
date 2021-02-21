@@ -1,7 +1,104 @@
-<?= $this->element('slider') ?>
+<?=$this->element('slider')?>
+
+<section class="content" style="padding-bottom: 0px;">
+	<section class="main">
+		<article class="intro">
+			<h1><strong>GE-AGRO</strong>, insumos agrículas</h1>
+			<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+            <?=$this->Html->link('Conheça Nossos Serviços', ['controller' => 'site', 'action' => 'servicos'])?>
+		</article>
+        <section class="columns">
+		 	<h2><span>Nossa Equipe</span></h2>
+		 	<article class="col3 team">
+                <div class="img-border"><img src="img/team/01s.jpg" alt=""></div>
+                <h3 style="margin-bottom: 5px;">Michael Brown</h3>
+                <p class="position">CEO/Founder</p>
+            </article><article class="col3 team">
+                <div class="img-border"><img src="img/team/02s.jpg" alt=""></div>
+                <h3 style="margin-bottom: 5px;">Michael Brown</h3>
+                <p class="position">CEO/Founder</p>
+            </article><article class="col3 team">
+                <div class="img-border"><img src="img/team/03s.jpg" alt=""></div>
+                <h3 style="margin-bottom: 5px;">Michael Brown</h3>
+                <p class="position">CEO/Founder</p>
+            </article>
+		 </section>
+	</section>
+	<aside>
+        <?=$this->element('examples/cotacoes')?>
+        <?=$this->element('examples/cambio')?>
+	</aside>
+	<a href="#top" class="go-top">Go to top of page</a>
+</section>
 
 <section class="content">
+    <section class="latest">
+        <article class="content-slider hp-our-clients">
+            <h2 style="margin-top: 0px;"><span>Clientes / Parceiros</span></h2>
+            <ul class="next-prev"><li class="prev"><a href="javascript:;">previous</a></li><li class="next"><a href="javascript:;">next</a></li></ul><div class="slider-box">
+                <ul style="width: 1120px;">
+                    <li><a href="javascript:;"><img src="img/temp/logo1.png" alt="" class="logo"></a></li>
+                    <li><a href="javascript:;"><img src="img/temp/logo2.png" alt="" class="logo"></a></li>
+                    <li><a href="javascript:;"><img src="img/temp/logo3.png" alt="" class="logo"></a></li>
+                    <li><a href="javascript:;"><img src="img/temp/logo2.png" alt="" class="logo"></a></li>
+                    <li><a href="javascript:;"><img src="img/temp/logo1.png" alt="" class="logo"></a></li>
+                    <li><a href="javascript:;"><img src="img/temp/logo1.png" alt="" class="logo"></a></li>
+                    <li><a href="javascript:;"><img src="img/temp/logo3.png" alt="" class="logo"></a></li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <section class="latest">
+        <h2 style="margin-bottom: 0px !important"><span>Últimas Notícias</span></h2>
+        <?=$this->element('examples/new')?>
+        <?=$this->element('examples/new')?>
+        <?=$this->element('examples/new')?>
+        <article class="post">
+            <p class="more">
+                <?=$this->Html->link('Mais Notícias', ['controller' => 'site', 'action' => 'noticias']);?>
+            </p>
+        </article>
+    </section>
+</section>
+
+<!--
+<section class="content">
+    <section class="columns" style="margin-bottom:0px">
+        <div class="col latest">
+            <h2><span>A GE-AGRO</span></h2>
+            <article class="post">
+                <p>MultiPurpose's goal is to help you build unique and modern websites fast, easy and with the lowest cost possible. With MultiPurpose you can create many unique style websites for differend needs.MultiPurpose's goal is to help you build unique and modern websites fast, easy and with the lowest cost possible. With MultiPurpose you can create many unique style websites for differend needs.</p>
+                <p>With MultiPurpose you can create many unique style websites for differend needs. MultiPurpose's goal is to help you build unique and modern websites fast, easy and with the lowest cost possible</p>
+                <p class="more">
+                <?php
+echo $this->Html->link(
+    'Saiba Mais',
+    ['controller' => 'site', 'action' => 'empresa'],
+    ['escape' => false, 'title' => 'Saiba Mais']
+);
+?>
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="columns" style="text-align: center; margin-top:0px">
+        <article class="col hp-intro">
+            <p class="cta">
+                <?php
+echo $this->Html->link(
+    'Conheça Nossos Serviços',
+    ['controller' => 'site', 'action' => 'servicos'],
+    ['escape' => false, 'class' => 'button', 'title' => 'Conheça Nossos Serviços']
+);
+?>
+            </p>
+        </article>
+    </section>
+
     <section class="columns">
+        <h2><span>Nossa Equipe</span></h2>
         <article class="col4">
             <p class="img"><a href="#"><img src="img/articles/01s.jpg" alt="" width="220" height="160"></a></p>
             <h3><a href="#">Unlimited Colors</a></h3>
@@ -20,34 +117,17 @@
             <p>It's a great deal to buy MultiPurpose now, because you get also 14 ThemeMotive's sliders for different needs and purposes.</p>
         </article>
     </section>
+
     <section class="columns">
-        <div class="col2 latest">
-            <h2><span>Latest from the blog</span></h2>
-            <article class="post">
-                <h3><a href="#">Most Customizable Template Ever has Released</a></h3>
-                <p class="post-meta">August 14, 2013 | <a href="#">5 Comments</a></p>
-                <p>MultiPurpose's goal is to help you build unique and modern websites fast, easy and with the lowest cost possible. With MultiPurpose you can create many unique style websites for differend needs.</p>
-                <p class="more"><a href="#">Read more</a></p>
-            </article>
-            <article>
-                <h3><a href="#">Build Better Websites with MultiPurpose - Use Tons of the Outstanding Features</a></h3>
-                <p class="post-meta">August 14, 2013 | <a href="#">10 Comments</a></p>
-                <p>Create fast your unique website with easy steps. Choose one top header style, header menu, slider type, color, title style, pattern or frame, font, boxed or wide version.</p>
-                <p class="more"><a href="#">Read more</a></p>
-            </article>
-        </div><div class="col2">
-            <article>
-                <h2><span>About us</span></h2>
-                <blockquote class="hp-quote">
-                    <p>MultiPurpose is probably most complete and customizable template in the world. Great deal to buy.</p>
-                    <p class="signature">- <span>Tom Sterling</span> / ThemeMotive Inc.</p>
-                </blockquote>
-            </article>
-            <article class="why-us">
-                <h2><span>Why customers choose us</span></h2>
-                <p>MultiPurpose has got tons of the outstanding features. It is probably the most complete and custmomizable template in the world. It includes for example: 14 predefinied different index pages for multipurpose usage (corporate, business, shop, magazine, hosting, agency, hotel, landing page), 14 predefinied different menus, 14 predefinied unique premium ThemeMotive sliders, 10 styles of the headlines and so much much more.</p>
-            </article>
-        </div>
+        <article class="col3">
+
+        </article><article class="col3">
+
+        </article><article class="col3">
+            <?=$this->element('examples/cotacoes')?>
+        </article>
     </section>
+
     <a href="#top" class="go-top">Go to top of page</a>
 </section>
+-->
