@@ -6,21 +6,18 @@
         </article><article class="widget_links">
             <h3><span>Services</span></h3>
             <?php
-if (isset($siteMenu)) {
-    echo "<ul>";
-    foreach ($siteMenu as $menu) {
-        $label = $menu['label'];
-        $url = $menu['url'] ?? [];
-        echo "<li>";
-        echo $this->Html->link(
-            $label,
-            isset($url) ? $url : [],
-        );
-        echo "</li>";
-    }
-    echo "</ul>";
-}
-?>
+            if (isset($siteMenu)) {
+                echo "<ul>";
+                foreach ($siteMenu as $menu) {
+                    $label = $menu['label'];
+                    $url = $menu['url'] ?? [];
+                    echo "<li>";
+                    echo $this->Html->link($label, isset($url) ? $url : []);
+                    echo "</li>";
+                }
+                echo "</ul>";
+            }
+            ?>
         </article><article class="widget_photos">
             <h3><span>Work</span></h3>
             <ul>
