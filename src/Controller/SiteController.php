@@ -39,7 +39,7 @@ class SiteController extends AppController
 
     public function empresa()
     {
-        $page = $this->Pages->get(10, ['contain' => []]);
+        $page = $this->Pages->get(4, ['contain' => []]);
         $title = $page->name;
 
         $crumbs = ['Home', $title];
@@ -49,17 +49,7 @@ class SiteController extends AppController
 
     public function noticias()
     {
-        $page = $this->Pages->get(12, ['contain' => []]);
-        $title = $page->name;
-
-        $crumbs = ['Home', $title];
-
-        $this->set(compact('title', 'crumbs', 'page'));
-    }
-
-    public function cadastro()
-    {
-        $page = $this->Pages->get(11, ['contain' => []]);
+        $page = $this->Pages->get(5, ['contain' => []]);
         $title = $page->name;
 
         $crumbs = ['Home', $title];
@@ -69,7 +59,7 @@ class SiteController extends AppController
 
     public function eventos()
     {
-        $page = $this->Pages->get(13, ['contain' => []]);
+        $page = $this->Pages->get(6, ['contain' => []]);
         $title = $page->name;
 
         $crumbs = ['Home', $title];
@@ -79,7 +69,7 @@ class SiteController extends AppController
 
     public function sitesUteis()
     {
-        $page = $this->Pages->get(14, ['contain' => []]);
+        $page = $this->Pages->get(7, ['contain' => []]);
         $title = $page->name;
 
         $crumbs = ['Home', $title];
@@ -89,7 +79,17 @@ class SiteController extends AppController
 
     public function cursos()
     {
-        $page = $this->Pages->get(15, ['contain' => []]);
+        $page = $this->Pages->get(8, ['contain' => []]);
+        $title = $page->name;
+
+        $crumbs = ['Home', $title];
+
+        $this->set(compact('title', 'crumbs', 'page'));
+    }
+
+    public function cadastro()
+    {
+        $page = $this->Pages->get(9, ['contain' => []]);
         $title = $page->name;
 
         $crumbs = ['Home', $title];
