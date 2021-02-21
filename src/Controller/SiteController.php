@@ -13,7 +13,7 @@ class SiteController extends AppController
 
         $this->viewBuilder()->setLayout('default');
 
-        $this->Authentication->allowUnauthenticated(['home', 'empresa', 'servicos', 'mail', 'login', 'contato']);
+        $this->Authentication->allowUnauthenticated(['home', 'empresa', 'servicos', 'noticias', 'eventos', 'sites_uteis', 'cursos', 'mail', 'login', 'contato']);
 
         $siteTopMenu = parent::getSiteTopMenu();
         $this->set(compact('siteTopMenu'));
