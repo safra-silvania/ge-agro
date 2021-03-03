@@ -4,8 +4,16 @@
 	<section class="main">
 		<article class="intro">
 			<h1><strong>GE-AGRO</strong>, insumos agrícolas</h1>
-			<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-            <?=$this->Html->link('Conheça Nossos Serviços', ['controller' => 'site', 'action' => 'servicos'])?>
+			<p>Facilitar o trabalho do produtor: é por isso que nós, da Ge-Agro, estamos aqui.</p>
+            <p>Nossa missão: melhorar a compra e a aquisição de insumos, buscando os melhores preços; organizar e planejar a safra de cada cliente.</p>
+            <p>Nossa visão: reunir tudo que o produtor precisa, todos os dias, em um só lugar</p>
+<?php
+echo $this->Html->link(
+    '<button type="button">Conheça Nossos Serviços</button>',
+    ['controller' => 'site', 'action' => 'servicos'],
+    ['escape' => false, 'title' => 'Link']
+);
+?>
 		</article>
         <section class="columns">
 		 	<h2><span>Nossa Equipe</span></h2>
