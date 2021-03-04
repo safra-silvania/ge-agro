@@ -6,7 +6,7 @@
 			<h1><strong>GE-AGRO</strong>, insumos agrícolas</h1>
 			<p>Facilitar o trabalho do produtor: é por isso que nós, da Ge-Agro, estamos aqui.</p>
             <p>Nossa missão: melhorar a compra e a aquisição de insumos, buscando os melhores preços; organizar e planejar a safra de cada cliente.</p>
-            <p>Nossa visão: reunir tudo que o produtor precisa, todos os dias, em um só lugar</p>
+            <p>Nossa visão: reunir tudo que o produtor precisa, todos os dias, em um só lugar.</p>
 <?php
 echo $this->Html->link(
     '<button type="button">Conheça Nossos Serviços</button>',
