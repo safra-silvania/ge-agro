@@ -1,0 +1,70 @@
+msgid "My name is {0}"
+msgstr "Je m'appelle {0}"
+
+msgid "Users"
+msgstr "Usuários"
+
+msgid "Invalid username or password"
+msgstr "Email ou senha incorretos"
+
+msgid "Pages"
+msgstr "Páginas"
+
+msgid "Page"
+msgstr "Página"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Page Status"
+msgstr "Status"
+msgid "Page_status_id"
+msgstr "Status"
+
+msgid "Id"
+msgstr "Código"
+
+msgid "Created"
+msgstr "Data Cadastro"
+
+msgid "Modified"
+msgstr "Data Alteração"
+
+msgid "Content"
+msgstr "Conteúdo"
+
+msgid "previous"
+msgstr "anterior"
+
+msgid "next"
+msgstr "próxima"
+
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr "Página {{page}} de {{pages}}, exibindo {{current}} registro(s) do total de {{count}}"
+
+msgid "Subpages"
+msgstr "Sub Páginas"
+
+msgid "Subpage"
+msgstr "Sub Página"
+
+msgid "index"
+msgstr "início"
+
+msgid "edit"
+msgstr "editar"
+
+msgid "add"
+msgstr "incluir"
+
+msgid "The page has been saved."
+msgstr "Página gravada com sucesso"
+
+msgid "The page could not be saved. Please, try again."
+msgstr "A Página não pôde ser gravada. Por favor, tente novamente"
+
+msgid "The page has been deleted."
+msgstr "Página gravada com sucesso"
+
+msgid "The page could not be deleted. Please, try again."
+msgstr "Página excluída com sucesso"

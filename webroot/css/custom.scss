@@ -1,0 +1,106 @@
+header > section.top {
+    background-color: #3f534a !important;
+    color: #ffffff !important;
+}
+
+.color-brown footer {
+    background: none;
+    background-color: #3f534a;
+}
+
+blockquote.restrict {
+    max-width: 70%;
+    margin: 4em auto;
+    padding: 0 0 0 55px;
+    border: none;
+    /* background: url("../img/lock.png") 0 0 no-repeat; */
+    color: #747474;
+    font-style: normal !important;
+}
+
+// header.h-admin section.top {border-bottom: 1px solid #ebebeb; background: #f5f5f5; color: #747474;}
+// header.h-admin section.top a {color: #3f3f3f;}
+// header.h-admin section.top li:hover>a {background-color: #e6e6e6; color: #3f3f3f;}
+// header.h-admin p.title strong {display: inline-block; margin-right: 10px;}
+// @media (max-width: 645px) {
+// 	header.h-admin p.title strong {display: block; margin-right: 0; text-align: center;}
+// }
+
+header.h-admin nav.mainmenu {
+    clear: both;
+    float: none;
+    margin: 15px 0 0;
+    padding: 0 19px;
+    background: #3f3f3f;
+}
+header.h-admin nav.mainmenu > ul {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0;
+}
+header.h-admin nav.mainmenu > ul > li {
+    height: 40px;
+    margin: 0;
+    border: none;
+    line-height: 40px;
+}
+header.h-admin nav.mainmenu > ul > li > a {
+    height: 40px;
+    border: none;
+    color: #fff;
+    line-height: 40px;
+}
+header.h-admin nav.mainmenu > ul > li > a:active {
+    color: #bc8c53;
+}
+header.h-admin nav.mainmenu > ul > li:hover > a {
+    background: #747474;
+    color: #fff;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+header.h-admin nav.mainmenu > ul > li.current-menu-item > a {
+    background: #bc8c53;
+    color: #fff;
+}
+header.h-admin nav.mainmenu > ul ul li a {
+    padding: 5px 15px;
+    line-height: 1.75em;
+}
+@media (max-width: 800px) {
+    header.h-admin nav.mainmenu {
+        margin: 10px 0 0;
+        padding: 5px 20px;
+    }
+    header.h-admin nav.mainmenu .select {
+        margin: 0;
+    }
+}
+
+@media (min-width: 801px) {
+    header.h8.sticky p.title,
+    header.h9.sticky p.title,
+    header.h10.sticky p.title {
+        display: none;
+    }
+    header.h8.sticky nav.mainmenu,
+    header.h9.sticky nav.mainmenu,
+    header.h10.sticky nav.mainmenu {
+        margin: 0;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.hp-intro p.cta {
+    height: 79px;
+    margin: 0;
+    padding: 0 20px 0 50px;
+    background: url("../theme/images/cta@2x.png") left center no-repeat;
+    font-size: 1.231em;
+    line-height: 79px;
+    text-align: center;
+}
